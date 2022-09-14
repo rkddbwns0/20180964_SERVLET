@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class = "card bg-dark text-white">
-        <img src = "img/top.jpg" class = "card-img" alt = "...">
+        <img src = "img/top.jpg" class = "card-img" alt = "top">
         <div class = "card-img-overlay">
             <h5 class = "card-title">
                 그래픽 카드 이벤트
