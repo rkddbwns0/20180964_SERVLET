@@ -1,14 +1,31 @@
 <%@ page contentType = "text/html;charset=utf-8" %>
+<%@ page import = "java.util.ArrayList" %>
+<%@ page import = "dto.Product" %>
+<jsp:useBean id = "productDAO" class = "dao.ProductRepository" scope = "session" />
+<%
+    ArrayList<Product> listOfProducts = productDAO.getAllProducts(); // 리스트에 상품 전체 정보를 얻어온다
+%>
 
 <%! String greeting = "꾸팡.COM에 오신 것을 환영합니다.";
         String tagline = "하단 페이지 : 확인"; %>
-    <div class = "jumbotron">
         <div class = "container">
-            <h1 class = "display-3">
-                <%=greeting%>
-            </h1>
+            <div class = "row" align = "center">
+                <%
+                	for (int i = 0; i < listOfProducts.size(); i++) {
+                        Product product = listOfProducts.get(i);
+                %>
+                <div class = "col-md-4">
+                    <h3><%= product.getPname() %></h3>
+                    <p><%= product.getDescription() %></p>
+                    <p><%= product.getUnitPrice() %>원</p>
+                </div>
+                <%
+                	}
+                %>
+            </div>
+            <hr>
         </div>
-    </div>
+
     <div class = "card bg-dark text-white">
         <img src = "img/top.jpg" class = "card-img" alt = "top">
         <div class = "card-img-overlay">
