@@ -28,4 +28,7 @@
     <a href = "#" class= "list-group-item list-group-item-action">
         지포스 3070시리즈
     </a>
+    <a href = "#" class = "list-group-item list-group-item-action">
+    	지포스 3080시리즈
+    </a>
 </div>
