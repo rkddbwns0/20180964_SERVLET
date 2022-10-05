@@ -26,7 +26,7 @@ public Product() {
         this.unitPrice = unitPrice;
     }
 
-    public String getProdutId() {
+    public String getProductId() {
         return productId;
     }
 
@@ -57,6 +57,10 @@ public Product() {
     public void setDescription(String description) {
         this.description = description;
     }
+    
+    public String getManufacturer() {
+        return manufacturer;
+    }
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer; 
@@ -68,6 +72,10 @@ public Product() {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+    
+    public long getUnitsInStock() {
+        return unitsInStock;
     }
 
     public void setUnitsInStock(long unitsInStock) {
