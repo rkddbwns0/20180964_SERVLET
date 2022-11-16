@@ -3,7 +3,6 @@
 <%@ page import = 'java.util.Date' %>
 <%@ page import = 'example.*' %>
 <%@ page import = "dao.ProductRepository" %>
-<%@ page errorPage = "../exception/product_not_found.jsp" %>
 
 <html>
     <head>
@@ -44,7 +43,7 @@
 
                     
                     <div class = "card bg-dark text-dark">
-            			<img src = "img/product/<%= product.getProductId()%>.jpg" class = "card-img" alt = "...">
+            			<img src="../img/product/<%=product.getFilename()%>" class="card-img" alt="...">
             			<div class = 'card-img-overlay'>
                 			<h5 class = 'card-title'>
                     			상품 이미지 원본

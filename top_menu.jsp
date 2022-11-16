@@ -8,7 +8,7 @@
     	</button>
         <div class = "dropdown-menu" aria-labelldby = "dropdownMenuButton">
             <a class = "dropdown-item" href = "#">CPU</a>
-            <a class = "dropdown-itml" href = "#">그래픽 카드</a>
+            <a class = "dropdown-item" href = "#">그래픽 카드</a>
             <a class = "dropdown-item" href = "#">키보드</a>
             <a class = "dropdown-item" href = "#">마우스</a>
         </div>
