@@ -21,16 +21,20 @@
     ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartlist");
     Product goodsQnt = new Product();
 
-    if (session.getAttribute("cartList") != null) {
-         for (int i = 0; i < cartList.size(); i++) {
+
+    if (cartList == null) {
+        cartList = new ArrayList<Product>();
+        session.getAttribute("cartlist");
+    } else {
+        for (int i = 0; i < cartList.size(); i++) {
         goodsQnt = cartList.get(i);
         if (goodsQnt.getProductId().equals(id)) {
             cartList.remove(goodsQnt);
             
-            return;
-            }
+            } 
         }
     }
+    
 
 
     response.sendRedirect("product_cart.jsp");
